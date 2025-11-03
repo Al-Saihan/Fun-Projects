@@ -236,58 +236,129 @@ h2,
 /* ! STOPWATCH STYLES */
 
 .stopwatch-container {
-    background-color: rgba(175, 237, 181, 0.9);
-    border-radius: 20px; 
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-    max-width: 350px;
-    margin: 50px auto; 
-    text-align: center;
+  background-color: rgba(175, 237, 181, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  margin: 50px auto;
+  text-align: center;
 }
 
 .time-display {
-    font-size: 300%;
-    font-weight: bold;
-    margin-bottom: 25px;
-    color: #333;
-    padding: 10px 0;
+  font-size: 300%;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #333;
+  padding: 10px 0;
 }
 
 .controls {
-    display: flex; 
-    justify-content: space-around;
-    gap: 10px; 
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
 }
 
 .stopwatch-btn {
-color: white;
-font-family: "Pixelify Sans", sans-serif;
-font-weight: 400;
-border: none;
-padding: 12px 25px;
-border-radius: 8px;
-font-size: 1.2rem; 
-cursor: pointer; 
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .stop {
-    background-color: #dc3545;
+  background-color: #dc3545;
 }
 
 .reset {
-    background-color: #fc5800;
+  background-color: #fc5800;
 }
 
 .start {
-    background-color: #28a745;
+  background-color: #28a745;
 }
-
 /* ! TODO LIST STYLES */
 .todo-section {
-  background-color: rgba(255, 250, 205, 0.9);
+  background-color: rgba(122, 122, 122, 0.6);
   border-radius: 15px;
   padding: 25px;
   max-width: 90%;
   margin: 40px auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+#todo-form {
+  text-align: center;
+}
+
+#todo-form input[type="text"] {
+  font-family: "Pixelify Sans", sans-serif;
+  width: 90%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+  display: inline-block;
+  margin-left: 0;
+}
+
+#todo-form button {
+  font-family: "Pixelify Sans", sans-serif;
+  max-width: 100%;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#todo-form button:hover {
+  background-color: #218838;
+}
+
+.task-buttons {
+  align-content: left;
+}
+.task-buttons button {
+  background-color: #5e5e5e;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: large;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 20px;
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  float: left;
+}
+
+.task-buttons button:hover {
+  background-color: #414141;
+}
+
+.task-item {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: large;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed span{
+  text-decoration: line-through;
+  color: #888;
 }
