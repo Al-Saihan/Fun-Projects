@@ -1,0 +1,70 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  margin: 0%;
+  overflow: hidden;
+}
+
+.bg1 {
+  background-image: url("/assets/bg_image_1.png");
+}
+
+.bg2 {
+  background-image: url("/assets/bg_image_2.png");
+}
+
+.bg3 {
+  background-image: url("/assets/bg_image_3.png");
+}
+
+.bg4 {
+  background-image: url("/assets/bg_image_4.png");
+}
+
+/* ? NAV-BAR - W3 School: https://www.w3schools.com/howto/howto_js_topnav.asp */
+
+/* NavBar Background */
+.topnav {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(
+    190deg,
+    rgba(66, 103, 51, 0.5) 0%,
+    rgba(16, 81, 64, 0.55) 100%
+  );
+  backdrop-filter: blur(4px);
+  box-shadow: #021602 0px 4px 6px -1px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 10px;
+  margin: 4px;
+}
+
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 18px;
+  margin: 8px 6px;
+  /* Remove underline from links */
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  border-radius: 8px; /* rounded corners */
+  box-shadow: #0b2e12 0px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #3d883e;
+  box-shadow: #0b2e12 0px 2px 4px -1px;
+  color: #ffffff;
+}
+
+/* Add a color tso the active/current link */
+.topnav a.active {
+  background-color: #13ad41;
+  color: white;
+}
