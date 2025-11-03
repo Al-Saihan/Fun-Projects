@@ -204,7 +204,7 @@ h2,
 
 .color-btn {
   color: #fff;
-  border: none;
+  border: 3px solid rgb(3, 3, 3);
   padding: 0.6rem 1rem;
   border-radius: 6px;
   margin: 0.25rem;
