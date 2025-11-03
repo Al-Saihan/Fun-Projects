@@ -19,6 +19,60 @@
       <div id="nav-placeholder"></div>
     </header>
 
+    <main>
+      <div style="padding-bottom: 15px;">
+        <h1>Your Fortune</h1>
+        <p id="fortune-prediction" class="fortune-box orange"></p>
+        <a href="/pages/fortune_generator.html" class="button"
+          >Generate New Fortune</a
+        >
+      </div>
+      <div class="customize-buttons">
+        <div class="color-buttons">
+          <button id="btn-orange" class="color-btn orng" type="button"></button>
+          <button id="btn-green" class="color-btn grn" type="button"></button>
+          <button id="btn-blue" class="color-btn bl" type="button"></button>
+          <button id="btn-red" class="color-btn rd" type="button"></button>
+        </div>
+      </div>
+    </main>
+
     <script src="/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("Generating fortune...");
+
+        const fortunes = [
+          "Soon, you will get a random call from Bkash scammer Nahid.",
+          "Today, you will lose your pet's collar.",
+          "Careful! Someone named Rafi is looking to borrow money from you.",
+          "Tomorrow, your pet will return home pregnant.",
+          "Someone named Mahin is looking to beat you because you stole his holiday ticket.",
+          "BRAC CG 4 is confirmed.",
+          "Adnan and Ashiqur Sir will end the class early today.",
+          "You will get full marks in your next assignment or exam.",
+          "Tomorrow, you will be mugged by a pregnant grandma.",
+          "You will win a lottery of 10 million Taka!",
+        ];
+
+        let randomIndex = Math.floor(Math.random() * fortunes.length);
+
+        prediction = fortunes[randomIndex];
+
+        document.getElementById("fortune-prediction").textContent = prediction;
+
+        console.log("Random Index is:", randomIndex);
+        console.log("Fortune is:", prediction);
+
+        document.querySelectorAll(".color-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            const colorClass = this.id.replace("btn-", "");
+            const fortuneBox = document.getElementById("fortune-prediction");
+
+            fortuneBox.className = "fortune-box " + colorClass;
+          });
+        });
+      });
+    </script>
   </body>
 </html>
