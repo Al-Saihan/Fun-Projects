@@ -1,3 +1,4 @@
+/* ! LANDING PAGE */
 html {
   height: 100%;
   font-family: "Pixelify Sans", sans-serif;
@@ -10,7 +11,7 @@ body {
 
 main {
   width: 90%;
-  max-width: 900px;
+  max-width: 90%;
   padding: 20px;
   text-align: center;
   margin: 0 auto;
@@ -28,11 +29,12 @@ h2,
 /* --- Project Card Styling --- */
 .card-grid {
   display: grid;
-  gap: 20px;
+  gap: 50px;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin: 0 auto;
   width: 100%;
+  max-width: 1000px;
 }
 
 .project-card {
@@ -102,7 +104,6 @@ h2,
 
 /* ? NAV-BAR - W3 School: https://www.w3schools.com/howto/howto_js_topnav.asp */
 
-/* NavBar Background */
 .topnav {
   position: sticky;
   top: 0;
@@ -146,6 +147,8 @@ h2,
   background-color: #13ad41;
   color: white;
 }
+
+/* ! FORTUNE COOKIE STYLES */
 
 .fortune-box {
   border-radius: 15px;
@@ -230,6 +233,7 @@ h2,
   background: #dc3545;
 }
 
+/* ! STOPWATCH STYLES */
 
 .stopwatch-container {
     background-color: rgba(175, 237, 181, 0.9);
@@ -276,4 +280,14 @@ cursor: pointer;
 
 .start {
     background-color: #28a745;
+}
+
+/* ! TODO LIST STYLES */
+.todo-section {
+  background-color: rgba(255, 250, 205, 0.9);
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 90%;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
