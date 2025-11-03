@@ -229,3 +229,51 @@ h2,
 .color-btn.rd {
   background: #dc3545;
 }
+
+
+.stopwatch-container {
+    background-color: rgba(175, 237, 181, 0.9);
+    border-radius: 20px; 
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    max-width: 350px;
+    margin: 50px auto; 
+    text-align: center;
+}
+
+.time-display {
+    font-size: 300%;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333;
+    padding: 10px 0;
+}
+
+.controls {
+    display: flex; 
+    justify-content: space-around;
+    gap: 10px; 
+}
+
+.stopwatch-btn {
+color: white;
+font-family: "Pixelify Sans", sans-serif;
+font-weight: 400;
+border: none;
+padding: 12px 25px;
+border-radius: 8px;
+font-size: 1.2rem; 
+cursor: pointer; 
+}
+
+.stop {
+    background-color: #dc3545;
+}
+
+.reset {
+    background-color: #fc5800;
+}
+
+.start {
+    background-color: #28a745;
+}

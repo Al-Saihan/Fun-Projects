@@ -1,24 +1,100 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>StopWatch</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body class="background bg3">
-    <header>
-      <div id="nav-placeholder"></div>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StopWatch</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
+</head>
 
-    <script src="/script.js"></script>
-  </body>
+<body class="background bg3">
+  <header>
+    <div id="nav-placeholder"></div>
+  </header>
+
+  <div class="stopwatch-container">
+    <p id="timerStatus" style="margin: 0%; margin-top: 5px; font-size: large;"></p>
+    <div class="time-display">0 Seconds</div>
+    <div class="controls">
+      <button class="stopwatch-btn start">Start</button>
+      <button class="stopwatch-btn stop">Stop</button>
+      <button class="stopwatch-btn reset">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    const startButton = document.querySelector(".start");
+    const stopButton = document.querySelector(".stop");
+    const resetButton = document.querySelector(".reset");
+    const timeDisplay = document.querySelector(".time-display");
+
+    let startTime;
+    let updatedTime;
+    let difference = 0;
+    let tInterval;
+    let running = false;
+    let pausedTime = 0;
+
+    function startTimer() {
+      if (!running) {
+        startTime = new Date().getTime() - pausedTime;
+        tInterval = setInterval(getShowTime, 1000);
+        running = true;
+        updateTimerStatus("Timer is running...");
+      }
+    }
+
+    function stopTimer() {
+      if (running) {
+        clearInterval(tInterval);
+        running = false;
+        pausedTime = difference;
+        updateTimerStatus("Timer is paused.");
+      }
+    }
+
+    function resetTimer() {
+      clearInterval(tInterval);
+      running = false;
+      pausedTime = 0;
+      difference = 0;
+      timeDisplay.innerHTML = "0 Seconds";
+      updateTimerStatus("");
+    }
+
+    function getShowTime() {
+      updatedTime = new Date().getTime();
+      difference = updatedTime - startTime;
+      let seconds = 3 * Math.floor((difference / 1000));
+      timeDisplay.innerHTML = seconds + " Seconds";
+      updateTimerStatus("Timer is running...");
+      if (seconds >= 30) {
+        stopTimer();
+        timeDisplay.innerHTML = "30 Seconds";
+        updateTimerStatus("Timer Finished!");
+      }
+    }
+
+    function updateTimerStatus(message) {
+      const timerStatus = document.getElementById("timerStatus");
+      timerStatus.textContent = message;
+    }
+
+    startButton.addEventListener("click", startTimer);
+    stopButton.addEventListener("click", stopTimer);
+    resetButton.addEventListener("click", resetTimer);
+  </script>
+
+  <script src="/script.js"></script>
+
+
+</body>
+
+</html>
+
 </html>
