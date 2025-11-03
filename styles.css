@@ -1,3 +1,82 @@
+html {
+  height: 100%;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+main {
+  width: 90%; /* Limit width on large screens */
+  max-width: 900px;
+  padding: 20px;
+  text-align: center; /* Center inline content (like text) */
+  margin: 0 auto; /* Center the main container */
+}
+
+h1,
+h2,
+.subtitle {
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0);
+  font-size: xx-large;
+  margin-bottom: 40px;
+}
+
+/* --- Project Card Styling --- */
+.card-grid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin: 0 auto;
+  width: 100%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: rgba(196, 238, 203, 0.8);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.project-card:hover {
+  /* Hover effect to make them feel interactive */
+  transform: translateY(-5px);
+  background-color: rgba(229, 255, 225, 0.9);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0);
+  font-size: x-large;
+  margin-top: 0;
+}
+
+.project-card p {
+  flex-grow: 1;
+  font-size: large;
+  color: #2d2d2d;
+}
+
+.view-link {
+  font-weight: bold;
+  font-size: large;
+  color: #28a745;
+  text-shadow: 0px 1px 1px rgb(174, 238, 194);
+  margin-top: 15px;
+}
+
 .background {
   width: 100vw;
   height: 100vh;
@@ -49,7 +128,6 @@
   /* Remove underline from links */
   text-decoration: none;
   font-size: 20px;
-  font-family: "Pixelify Sans", sans-serif;
   font-weight: 400;
   border-radius: 8px; /* rounded corners */
   box-shadow: #0b2e12 0px;
